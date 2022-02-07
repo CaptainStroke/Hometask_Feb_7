@@ -58,6 +58,33 @@
 
 //4. Создать символьный массив из 100 случайных элементов.Определить, сколько в нём цифр, букв и знаков пунктуации.
 
+//#include <iostream>
+//#include <ctime>
+//#include <Windows.h>
+//using namespace std;
+//int main()
+//{
+//	srand(time(NULL));
+//	const char size = 100;
+//	char num[size];
+//	int l = 0;
+//	int n = 0;
+//	int p = 0;
+//	for (int i = 0; i < size; i++)
+//	{
+//		num[i] = rand() % 96 + 32;
+//		if (num[i] >= 65 && num[i] <= 90 || num[i] >= 97 && num[i] <= 122) l++, cout << num[i] << ", ";
+//		else if (num[i] >= 48 && num[i] <= 57) n++, cout << num[i] << ", ";
+//		else p++, cout << num[i] << ", ";
+//	}
+//	cout <<"\nLetters - " << l << "\n";
+//	cout << "Number - " << n << "\n";
+//	cout <<"Punctuation - " << p << "\n";
+//}
+
+//5. Написать программу, которая предлагает пользователю ввести число, и затем подсчитывает,
+//сколько раз это число встречается в массиве на 100 случайных элементов.
+
 #include <iostream>
 #include <ctime>
 #include <Windows.h>
@@ -65,25 +92,20 @@ using namespace std;
 int main()
 {
 	srand(time(NULL));
-	const char size = 100;
-	char num[size];
-	int l = 0;
-	int n = 0;
-	int p = 0;
+	const int size = 100;
+	int num[size];
+	
+	int j = 0;
+	int l = 7;
+	cout << "Enter the number between 1 and 20 - ";
+	cin >> l;
 	for (int i = 0; i < size; i++)
 	{
-		num[i] = rand() % 96 + 32;
-		if (num[i] >= 65 && num[i] <= 90 || num[i] >= 97 && num[i] <= 122) l++, cout << num[i] << ", ";
-		else if (num[i] >= 48 && num[i] <= 57) n++, cout << num[i] << ", ";
-		else p++, cout << num[i] << ", ";
+		num[i] = rand() % 20 + 1;
+		//cout << num[i] << ", ";
+		if (l == num[i]) j++, cout << j << " - " << i+1 << " - " << num[i] << endl;
 	}
-	cout <<"\nLetters - " << l << "\n";
-	cout << "Number - " << n << "\n";
-	cout <<"Punctuation - " << p << "\n";
 }
-
-//5. Написать программу, которая предлагает пользователю ввести число, и затем подсчитывает,
-//сколько раз это число встречается в массиве на 100 случайных элементов.
 
 //6. Создать массив из 20 случайных чисел в диапазоне от - 10 до 30. Написать программу, 
 //определяющую сумму элементов массива, находящихся в массиве после первого отрицательного элемента.
