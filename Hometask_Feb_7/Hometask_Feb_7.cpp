@@ -31,7 +31,30 @@
 //	}
 //}
 
-//3. Создать массив из 10 случайных чисел в диапазоне от - 20 до 20. Определить количество, сумму  и среднее арифметическое положительных элементов массива.
+//3. Создать массив из 10 случайных чисел в диапазоне от - 20 до 20. Определить количество, 
+//сумму  и среднее арифметическое положительных элементов массива.
+
+#include <iostream>
+#include <ctime>
+#include <Windows.h>
+using namespace std;
+int main()
+{
+	srand(time(NULL));
+	const int size = 10;
+	int numb[size];
+	int j = 0;
+	int sum = 0;
+	for (int i = 0; i < size; i++)
+		{
+			numb[i] = rand() % 41 - 20;
+			cout << i + 1 << " - " << numb[i] << endl;
+			if (numb[i] > 0)	sum += numb[i], j++;
+			if (i < size - 1) continue;			
+		}
+		cout << "Total sum = " << sum << " from " << j << " numbers\n";
+		cout << "Medium ariphmetic = " << float(sum) / float( j);
+}
 
 //4. Создать символьный массив из 100 случайных элементов.Определить, сколько в нём цифр, букв и знаков пунктуации.
 
