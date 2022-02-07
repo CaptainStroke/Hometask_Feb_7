@@ -34,6 +34,30 @@
 //3. Создать массив из 10 случайных чисел в диапазоне от - 20 до 20. Определить количество, 
 //сумму  и среднее арифметическое положительных элементов массива.
 
+//#include <iostream>
+//#include <ctime>
+//#include <Windows.h>
+//using namespace std;
+//int main()
+//{
+//	srand(time(NULL));
+//	const int size = 10;
+//	int numb[size];
+//	int j = 0;
+//	int sum = 0;
+//	for (int i = 0; i < size; i++)
+//		{
+//			numb[i] = rand() % 41 - 20;
+//			cout << i + 1 << " - " << numb[i] << endl;
+//			if (numb[i] > 0)	sum += numb[i], j++;
+//			if (i < size - 1) continue;			
+//		}
+//		cout << "Total sum = " << sum << " from " << j << " numbers\n";
+//		cout << "Medium ariphmetic = " << float(sum) / float( j);
+//}
+
+//4. Создать символьный массив из 100 случайных элементов.Определить, сколько в нём цифр, букв и знаков пунктуации.
+
 #include <iostream>
 #include <ctime>
 #include <Windows.h>
@@ -41,22 +65,22 @@ using namespace std;
 int main()
 {
 	srand(time(NULL));
-	const int size = 10;
-	int numb[size];
-	int j = 0;
-	int sum = 0;
+	const char size = 100;
+	char num[size];
+	int l = 0;
+	int n = 0;
+	int p = 0;
 	for (int i = 0; i < size; i++)
-		{
-			numb[i] = rand() % 41 - 20;
-			cout << i + 1 << " - " << numb[i] << endl;
-			if (numb[i] > 0)	sum += numb[i], j++;
-			if (i < size - 1) continue;			
-		}
-		cout << "Total sum = " << sum << " from " << j << " numbers\n";
-		cout << "Medium ariphmetic = " << float(sum) / float( j);
+	{
+		num[i] = rand() % 96 + 32;
+		if (num[i] >= 65 && num[i] <= 90 || num[i] >= 97 && num[i] <= 122) l++, cout << num[i] << ", ";
+		else if (num[i] >= 48 && num[i] <= 57) n++, cout << num[i] << ", ";
+		else p++, cout << num[i] << ", ";
+	}
+	cout <<"\nLetters - " << l << "\n";
+	cout << "Number - " << n << "\n";
+	cout <<"Punctuation - " << p << "\n";
 }
-
-//4. Создать символьный массив из 100 случайных элементов.Определить, сколько в нём цифр, букв и знаков пунктуации.
 
 //5. Написать программу, которая предлагает пользователю ввести число, и затем подсчитывает,
 //сколько раз это число встречается в массиве на 100 случайных элементов.
