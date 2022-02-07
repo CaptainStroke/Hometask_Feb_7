@@ -155,7 +155,32 @@
 //}
 
 
-//8. Создать массив из 20 случайных чисел.Определить минимальный и максимальный элемент массива(вывести значение и порядковый номер).
+//8. Создать массив из 20 случайных чисел. Определить минимальный и максимальный элемент массива(вывести значение и порядковый номер).
+
+#include <iostream>
+#include <ctime>
+#include <Windows.h>
+using namespace std;
+int main()
+{
+	srand(time(NULL));
+	const int size = 20;
+	int num[size];
+	int max = 0;
+	int min = 0;
+	int j = 0;
+	for (int i = 0; i < size; i++)
+	{
+		num[i] = rand();
+		cout << num[i] << endl;
+		j++;
+		if (num[i] > max && j == 1) min = num[i], max = num[i];
+		if (num[i] > max && num[i] > min) max = num[i];
+		if (num[i] < max && num[i] < min) min = num[i];
+	}
+	cout << "Last min - " << min << endl;
+	cout << "Last max - " << max << endl;
+}
 
 //9. Создать массив на 100 вещественных чисел.Определить, сколько элементов массива не имеют вещественной части.
 
