@@ -110,29 +110,50 @@
 //6. Создать массив из 20 случайных чисел в диапазоне от - 10 до 30. Написать программу, 
 //определяющую сумму элементов массива, находящихся в массиве после первого отрицательного элемента.
 
-#include <iostream>
-#include <ctime>
-#include <Windows.h>
-using namespace std;
-int main()
-{
-	srand(time(NULL));
-	const int size = 20;
-	int num[size];
-	int sum = 0;
-	int j = 0;
-	int count = 0;
-	for (int i = 0; i < size; i++)
-	{
-		num[i] = rand() % 41 - 10;
-		if (num[i] < 0 && j == 0) j++;
-		else if (j > 0) count++;
-	}
-	cout << count << endl;
-}
+//#include <iostream>
+//#include <ctime>
+//#include <Windows.h>
+//using namespace std;
+//int main()
+//{
+//	srand(time(NULL));
+//	const int size = 20;
+//	int num[size];
+//	int sum = 0;
+//	int j = 0;
+//	int count = 0; // count after first minus number
+//	for (int i = 0; i < size; i++)
+//	{
+//		num[i] = rand() % 41 - 10;
+//		if (num[i] < 0 && j == 0) j++;
+//		else if (j > 0) count++;
+//	}
+//	cout << count << endl;
+//}
 
 //7. Создать массив из 20 случайных чисел в диапазоне от - 30 до 10. Написать программу, 
 //определяющую сумму элементов массива, находящихся в массиве до первого положительного элемента.
+
+//#include <iostream>
+//#include <ctime>
+//#include <Windows.h>
+//using namespace std;
+//int main()
+//{
+//	srand(time(NULL));
+//	const int size = 20;
+//	int num[size];
+//	int j = 0;
+//	int count = 0;
+//	for (int i = 0; i < size; i++)
+//	{
+//		num[i] = rand() % 41 - 30;
+//		if (num[i] < 0 && j == 0) count++;
+//		else if (num[i] >= 0) j++;
+//	}
+//	cout << count;
+//}
+
 
 //8. Создать массив из 20 случайных чисел.Определить минимальный и максимальный элемент массива(вывести значение и порядковый номер).
 
