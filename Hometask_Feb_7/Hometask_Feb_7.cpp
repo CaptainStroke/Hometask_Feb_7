@@ -85,6 +85,31 @@
 //5. Написать программу, которая предлагает пользователю ввести число, и затем подсчитывает,
 //сколько раз это число встречается в массиве на 100 случайных элементов.
 
+//#include <iostream>
+//#include <ctime>
+//#include <Windows.h>
+//using namespace std;
+//int main()
+//{
+//	srand(time(NULL));
+//	const int size = 100;
+//	int num[size];
+//	
+//	int j = 0;
+//	int l = 7;
+//	cout << "Enter the number between 1 and 20 - ";
+//	cin >> l;
+//	for (int i = 0; i < size; i++)
+//	{
+//		num[i] = rand() % 20 + 1;
+//		//cout << num[i] << ", ";
+//		if (l == num[i]) j++, cout << j << " - " << i+1 << " - " << num[i] << endl;
+//	}
+//}
+
+//6. Создать массив из 20 случайных чисел в диапазоне от - 10 до 30. Написать программу, 
+//определяющую сумму элементов массива, находящихся в массиве после первого отрицательного элемента.
+
 #include <iostream>
 #include <ctime>
 #include <Windows.h>
@@ -92,24 +117,19 @@ using namespace std;
 int main()
 {
 	srand(time(NULL));
-	const int size = 100;
+	const int size = 20;
 	int num[size];
-	
+	int sum = 0;
 	int j = 0;
-	int l = 7;
-	cout << "Enter the number between 1 and 20 - ";
-	cin >> l;
+	int count = 0;
 	for (int i = 0; i < size; i++)
 	{
-		num[i] = rand() % 20 + 1;
-		//cout << num[i] << ", ";
-		if (l == num[i]) j++, cout << j << " - " << i+1 << " - " << num[i] << endl;
+		num[i] = rand() % 41 - 10;
+		if (num[i] < 0 && j == 0) j++;
+		else if (j > 0) count++;
 	}
+	cout << count << endl;
 }
-
-//6. Создать массив из 20 случайных чисел в диапазоне от - 10 до 30. Написать программу, 
-//определяющую сумму элементов массива, находящихся в массиве после первого отрицательного элемента.
-
 
 //7. Создать массив из 20 случайных чисел в диапазоне от - 30 до 10. Написать программу, 
 //определяющую сумму элементов массива, находящихся в массиве до первого положительного элемента.
