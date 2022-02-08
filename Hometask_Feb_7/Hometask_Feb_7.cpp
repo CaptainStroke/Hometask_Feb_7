@@ -157,6 +157,36 @@
 
 //8. Создать массив из 20 случайных чисел. Определить минимальный и максимальный элемент массива(вывести значение и порядковый номер).
 
+//#include <iostream>
+//#include <ctime>
+//#include <Windows.h>
+//using namespace std;
+//int main()
+//{
+//	srand(time(NULL));
+//	const int size = 20;
+//	int num[size];
+//	int max = 0;
+//	int min = 0;
+//	int j = 0;
+//	for (int i = 0; i < size; i++)
+//	{
+//		num[i] = rand();
+//		cout << num[i] << endl;
+//		j++;
+//		if (num[i] > max && j == 1) min = num[i], max = num[i];
+//		if (num[i] > max && num[i] > min) max = num[i];
+//		if (num[i] < max && num[i] < min) min = num[i];
+//	}
+//	cout << "Last min - " << min << endl;
+//	cout << "Last max - " << max << endl;
+//}
+
+//9. Создать массив на 100 вещественных чисел. Определить, сколько элементов массива не имеют вещественной части.
+
+
+//10. Создать массив из 200 случайных чисел в диапазоне от 0 до 200. Определить количество одноразрядных, двухразрядных и трёхразрядных чисел в процентном отношении.
+
 #include <iostream>
 #include <ctime>
 #include <Windows.h>
@@ -164,28 +194,23 @@ using namespace std;
 int main()
 {
 	srand(time(NULL));
-	const int size = 20;
+	const int size = 200;
 	int num[size];
-	int max = 0;
-	int min = 0;
-	int j = 0;
+	int one = 0;
+	int two = 0;
+	int three = 0;
 	for (int i = 0; i < size; i++)
 	{
-		num[i] = rand();
-		cout << num[i] << endl;
-		j++;
-		if (num[i] > max && j == 1) min = num[i], max = num[i];
-		if (num[i] > max && num[i] > min) max = num[i];
-		if (num[i] < max && num[i] < min) min = num[i];
+		num[i] = rand() % 201;
+		if (num[i] <= 9) one++;
+		else if (num[i] > 9 && num[i] <= 99) two++;
+		else three++;
+		//cout << num[i] << endl;
 	}
-	cout << "Last min - " << min << endl;
-	cout << "Last max - " << max << endl;
+	cout << "One digit number - " << one << endl;
+	cout << "Two digit number - " << two << endl;
+	cout << "Three digit numbet - " << three << endl;
 }
-
-//9. Создать массив на 100 вещественных чисел.Определить, сколько элементов массива не имеют вещественной части.
-
-//10. Создать массив из 200 случайных чисел в диапазоне от 0 до 200. Определить количество одноразрядных, двухразрядных и трёхразрядных чисел в процентном отношении.
-
 
 //11. Создать массив из 10 целых случайных чисел.Изменить порядок следования элементов массива на противоположный(1 - й элемент меняется с 10 - м, 2 - й элемент с 9 - м и тд).
 
