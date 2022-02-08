@@ -235,32 +235,54 @@
 //	cout << "Three digit numbet - " << three << endl;
 //}
 
-//11. Создать массив из 10 целых случайных чисел.Изменить порядок следования элементов массива на противоположный(1 - й элемент меняется с 10 - м, 2 - й элемент с 9 - м и тд).
+//11. Создать массив из 10 целых случайных чисел. Изменить порядок следования элементов массива на противоположный(1 - й элемент меняется с 10 - м, 2 - й элемент с 9 - м и тд).
 
-#include <iostream>
-#include <ctime>
-#include <Windows.h>
-using namespace std;
-int main()
-{
-	srand(time(NULL));
-	const int size = 10;
-	int num[size];
-	int i = 0;
-	int rev[size];
-	for (int i = 0; i < size; i++)
-	{
-		num[i] = rand() % 100;
-		rev[size - 1 - i] = num[i];
-		cout << "Original array - " << i + 1 << " - " << num[i] << "\n";
-	}
-	cout << "Reverse array\n";
-	for (int i = 0; i < size; i++)
-	{
-		num[i] = rev[i];
-		cout <<i + 1 << " - " << num[i] << " - Original reversed\n";
-	}
-}
+//#include <iostream>
+//#include <ctime>
+//#include <Windows.h>
+//using namespace std;
+//int main()
+//{
+//	srand(time(NULL));
+//	const int size = 10;
+//	int num[size];
+//	int i = 0;
+//	int rev[size];
+//	for (int i = 0; i < size; i++)
+//	{
+//		num[i] = rand() % 100;
+//		rev[size - 1 - i] = num[i];
+//		cout << "Original array - " << i + 1 << " - " << num[i] << "\n";
+//	}
+//	cout << "Reverse array\n";
+//	for (int i = 0; i < size; i++)
+//	{
+//		num[i] = rev[i];
+//		cout <<i + 1 << " - " << num[i] << " - Original reversed\n";
+//	}
+//}
 
 
 //12. Создать два массива A и B по 5 элементов.Создать третий массив C на 10 элементов, в который копируются элементы из первого и второго массива поочередно(например, С[0] = A[0], c[1] = B[0], C[2] = A[1], C[3] = B[1] и тд).
+
+//#include <iostream>
+//#include <ctime>
+//#include <Windows.h>
+//using namespace std;
+//int main()
+//{
+//	srand(time(NULL));
+//	const int size = 5;
+//	int ar[size] = { 1, 3, 5 ,7 ,9 };
+//	int br[size] = { 2, 4, 6 , 8 ,10 };
+//	const int length = 10;
+//	int j = 0;
+//	int l = 0;
+//	int cr[length];
+//	for (int i = 0; i < length; i++)
+//	{
+//		if (i % 2 == 0) cr[i] = ar[j], j++;
+//		if (i % 2 != 0) cr[i] = br[l], l++;
+//		cout << cr[i] << "\n";
+//	}
+//}
