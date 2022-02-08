@@ -184,9 +184,6 @@
 
 //9. Создать массив на 100 вещественных чисел. Определить, сколько элементов массива не имеют вещественной части.
 
-
-//10. Создать массив из 200 случайных чисел в диапазоне от 0 до 200. Определить количество одноразрядных, двухразрядных и трёхразрядных чисел в процентном отношении.
-
 #include <iostream>
 #include <ctime>
 #include <Windows.h>
@@ -194,23 +191,51 @@ using namespace std;
 int main()
 {
 	srand(time(NULL));
-	const int size = 200;
-	int num[size];
-	int one = 0;
-	int two = 0;
-	int three = 0;
+	const int size = 100;
+	float num[size] = {};
+	int j = 0;
+	int l = 0;
+	float k = 0;
+	float sum = 0.25;
 	for (int i = 0; i < size; i++)
 	{
-		num[i] = rand() % 201;
-		if (num[i] <= 9) one++;
-		else if (num[i] > 9 && num[i] <= 99) two++;
-		else three++;
-		//cout << num[i] << endl;
+		k++;
+		num[i] = sum * k;
+		if (num[i] != int(num[i])) j++, cout << j << " - " << num[i] << endl;
+		else if (num[i] == int(num[i])) l++, cout << l << " - " << num[i] << endl;
 	}
-	cout << "One digit number - " << one << endl;
-	cout << "Two digit number - " << two << endl;
-	cout << "Three digit numbet - " << three << endl;
+	cout <<"\n\n" << l << " - real numbers \n";
+	cout << j << " - numbers with float\n" ;
+
+
 }
+
+//10. Создать массив из 200 случайных чисел в диапазоне от 0 до 200. Определить количество одноразрядных, двухразрядных и трёхразрядных чисел в процентном отношении.
+
+//#include <iostream>
+//#include <ctime>
+//#include <Windows.h>
+//using namespace std;
+//int main()
+//{
+//	srand(time(NULL));
+//	const int size = 200;
+//	int num[size];
+//	int one = 0;
+//	int two = 0;
+//	int three = 0;
+//	for (int i = 0; i < size; i++)
+//	{
+//		num[i] = rand() % 201;
+//		if (num[i] <= 9) one++;
+//		else if (num[i] > 9 && num[i] <= 99) two++;
+//		else three++;
+//		//cout << num[i] << endl;
+//	}
+//	cout << "One digit number - " << one << endl;
+//	cout << "Two digit number - " << two << endl;
+//	cout << "Three digit numbet - " << three << endl;
+//}
 
 //11. Создать массив из 10 целых случайных чисел.Изменить порядок следования элементов массива на противоположный(1 - й элемент меняется с 10 - м, 2 - й элемент с 9 - м и тд).
 
